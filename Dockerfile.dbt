@@ -8,4 +8,5 @@ RUN pip install --no-cache-dir -r dbt-requirements.txt
 
 WORKDIR /usr/dbt/project
 
+COPY dbt_project /usr/dbt/project/
 CMD ["bash"]

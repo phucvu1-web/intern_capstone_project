@@ -58,13 +58,6 @@ with DAG(
             'PGPASSWORD': 'postgres_warehouse',
             'PGDATABASE': 'postgres_warehousedb',           
         },
-        mounts=[
-            {
-                'source': '/home/phuc.vu1/Downloads/intern_capstone_project/dbt_project',
-                'target': '/usr/dbt/project',
-                'type': 'bind',
-            }
-        ],
     )
 
     create_tables >> ingest_data >> run_dbt
