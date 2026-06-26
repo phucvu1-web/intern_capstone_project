@@ -22,8 +22,8 @@ cleaned AS (
         TRIM(reason) As reason,
 
         CAST(COALESCE(NULLIF(TRIM(cost), ''), '0') AS  NUMERIC) AS cost,
-        COALESCE(NULLIF(TRIM(vet_name), ''), '0') AS vet_name,
-        COALESCE(NULLIF(TRIM(notes), ''), '0') AS notes
+        COALESCE(NULLIF(TRIM(vet_name), ''), 'N/A') AS vet_name,
+        COALESCE(NULLIF(TRIM(notes), ''), 'N/A') AS notes
     FROM source
 )
 SELECT * FROM cleaned

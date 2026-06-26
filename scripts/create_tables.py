@@ -11,7 +11,7 @@ def get_connection():
         host=os.getenv("PGHOST"),
         port=os.getenv("PGPORT"),
         user=os.getenv("PGUSER"),
-        password=os.getenv("PSPASSWORD"),
+        password=os.getenv("PGPASSWORD"),
         dbname=os.getenv("PGDATABASE"),
     )
 CREATE_TABLE_SQL = {
@@ -59,7 +59,7 @@ def create_tables():
         logger.info(f"Table {table_name} ready")
 
     conn.commit()
-    cur.close
+    cur.close()
     conn.close()
     logger.info("all tables created!")
 

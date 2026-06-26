@@ -9,7 +9,6 @@ sys.path.insert(0, '/opt/airflow/scripts')
 
 def run_create_tables():
     from create_tables import create_tables
-
     create_tables()
 
 def run_ingest():
