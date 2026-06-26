@@ -45,12 +45,12 @@ with DAG(
     
     run_dbt = DockerOperator(
         task_id = 'run_dbt_transformations',
-        image = 'intern_capstone_project-dbt',
+        image = os.getenv("IMAGE_NAME"),
         api_version='auto',
         auto_remove=True,
         command='bash -c "dbt run --project-dir /usr/dbt/project && dbt test --project-dir /usr/dbt/project"',
         docker_url='unix:///var/run/docker.sock',
-        network_mode = 'intern_capstone_project_pipeline_net',
+        network_mode = os.getenv("NETWORK_NAME"),
         environment={
             'PGHOST': 'postgres_warehouse',
             'PGPORT': '5432',

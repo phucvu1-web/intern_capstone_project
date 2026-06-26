@@ -9,6 +9,8 @@ x-airflow-env: &airflow-env
   PGPORT: 5432
   PGPASSWORD: postgres_warehouse
   PGDATABASE: postgres_warehousedb
+  NETWORK_NAME: intern_capstone_project_pipeline_net 
+  IMAGE_NAME: intern_capstone_project-dbt 
   AIRFLOW__CORE__EXECUTOR: LocalExecutor
   AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
   AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true'
