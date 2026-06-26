@@ -1,0 +1,52 @@
+version: 2
+
+sources: 
+  - name: raw
+    database: postgres_warehousedb
+    schema: public
+    tables:
+      - name: raw_pets
+      - name: raw_owners
+      - name: raw_visits
+  
+models:
+  - name: stg_pets
+    description: "cleaned pet data from raw_pets"
+    columns:
+    - name: pet_id
+      tests:
+        - not_null
+        - unique
+    - name: species
+      tests: 
+        - not_null
+    - name: vaccinated
+      tests:
+        - not_null
+        - accepted_values:
+            arguments:
+              values: ['Yes', 'No', 'Unknown']
+    - name: owner_id
+      tests:
+      - not_null
+  
+  - name: stg_owners
+    description: "cleaned owner data from raw_owners"
+    columns:
+    - name: owner_id
+      tests:
+        - not_null
+        - unique
+    - name: full_name
+      tests:
+        - not_null
+  - name: stg_visits
+    description: "cleaned visit data from raw_visits"
+    columns:
+    - name: visit_id
+      tests:
+        - not_null
+        - unique
+    - name: pet_id
+      tests:
+        - not_null

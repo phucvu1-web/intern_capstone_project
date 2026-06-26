@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /usr/dbt
+
+COPY dbt_project/dbt-requirements.txt .
+
+RUN pip install --no-cache-dir -r dbt-requirements.txt
+
+WORKDIR /usr/dbt/project
+
+CMD ["bash"]

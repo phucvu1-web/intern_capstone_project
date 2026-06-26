@@ -1,0 +1,166 @@
+[0m11:13:56.487436 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 11:13:56.490991 | bf6a3ac7-e224-42e5-8b30-e9fc77ddb0b2 ==============================
+[0m11:13:56.490991 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:13:56.491577 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'profiles_dir': '/home/phuc.vu1/.dbt', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'debug': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'no_print': 'None', 'fail_fast': 'False', 'target_path': 'None', 'invocation_command': 'dbt init first_project', 'log_path': 'logs', 'static_parser': 'True', 'printer_width': '80', 'partial_parse': 'True', 'cache_selected_only': 'False'}
+[0m11:13:56.499183 [debug] [MainThread]: Starter project path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m11:13:56.502276 [info ] [MainThread]: 
+Your new dbt project "first_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:13:56.502871 [info ] [MainThread]: Setting up your profile.
+[0m11:15:18.956558 [info ] [MainThread]: Profile first_project written to /home/phuc.vu1/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:15:18.964802 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 82.528496, "process_in_blocks": "3744", "process_kernel_time": 0.097043, "process_mem_max_rss": "108428", "process_out_blocks": "80", "process_user_time": 1.30758}
+[0m11:15:18.965406 [debug] [MainThread]: Command `dbt init` succeeded at 11:15:18.965299 after 82.53 seconds
+[0m11:15:18.965815 [debug] [MainThread]: Flushing usage events
+[0m11:33:27.522477 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 11:33:27.525798 | 7d590445-f92d-4e22-b0dd-cf1c54909831 ==============================
+[0m11:33:27.525798 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:33:27.526365 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'log_format': 'default', 'empty': 'None', 'use_colors': 'True', 'printer_width': '80', 'debug': 'False', 'quiet': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'version_check': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'write_json': 'True', 'profiles_dir': '/home/phuc.vu1/.dbt', 'introspect': 'True'}
+[0m11:33:27.533824 [info ] [MainThread]: dbt version: 1.11.11
+[0m11:33:27.534301 [info ] [MainThread]: python version: 3.12.3
+[0m11:33:27.534673 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m11:33:27.535044 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m11:33:27.579483 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m11:33:27.579919 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m11:33:27.580289 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m11:33:27.580752 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m11:33:27.581575 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.109715514, "process_in_blocks": "0", "process_kernel_time": 0.094987, "process_mem_max_rss": "108612", "process_out_blocks": "16", "process_user_time": 1.234834}
+[0m11:33:27.582140 [debug] [MainThread]: Command `dbt debug` failed at 11:33:27.582037 after 0.11 seconds
+[0m11:33:27.582600 [debug] [MainThread]: Flushing usage events
+[0m11:42:32.946885 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 11:42:32.950167 | 82c60122-45cd-465e-8897-69078b78167e ==============================
+[0m11:42:32.950167 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:42:32.950787 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'quiet': 'False', 'write_json': 'True', 'empty': 'None', 'log_path': 'logs', 'invocation_command': 'dbt init', 'printer_width': '80', 'introspect': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'use_colors': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'debug': 'False', 'warn_error': 'None', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'profiles_dir': '/home/phuc.vu1/.dbt'}
+[0m11:42:45.509378 [info ] [MainThread]: A project called first_project already exists here.
+[0m11:42:45.513356 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 12.616335, "process_in_blocks": "0", "process_kernel_time": 0.081925, "process_mem_max_rss": "103484", "process_out_blocks": "8", "process_user_time": 1.251767}
+[0m11:42:45.515907 [debug] [MainThread]: Command `dbt init` succeeded at 11:42:45.515355 after 12.62 seconds
+[0m11:42:45.517684 [debug] [MainThread]: Flushing usage events
+[0m13:45:37.054351 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:45:37.057715 | e9b5d2ec-642a-48cc-9660-5eb7048da6fb ==============================
+[0m13:45:37.057715 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:45:37.058553 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'log_cache_events': 'False', 'empty': 'None', 'version_check': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'fail_fast': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'profiles_dir': '/home/phuc.vu1/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'quiet': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'printer_width': '80', 'use_colors': 'True'}
+[0m13:45:37.066358 [info ] [MainThread]: dbt version: 1.11.11
+[0m13:45:37.066887 [info ] [MainThread]: python version: 3.12.3
+[0m13:45:37.067275 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m13:45:37.067661 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m13:45:37.110289 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m13:45:37.110868 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m13:45:37.111274 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m13:45:37.111723 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:45:37.112518 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.10956771, "process_in_blocks": "0", "process_kernel_time": 0.089921, "process_mem_max_rss": "108548", "process_out_blocks": "8", "process_user_time": 1.258906}
+[0m13:45:37.112980 [debug] [MainThread]: Command `dbt debug` failed at 13:45:37.112894 after 0.11 seconds
+[0m13:45:37.113304 [debug] [MainThread]: Flushing usage events
+[0m09:34:23.987486 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:34:23.991604 | ecc7afcc-d78e-448e-9459-74c6cedc8096 ==============================
+[0m09:34:23.991604 [info ] [MainThread]: Running with dbt=1.11.11
+[0m09:34:23.992250 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'log_format': 'default', 'empty': 'False', 'version_check': 'True', 'warn_error': 'None', 'profiles_dir': '/home/phuc.vu1/.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'target_path': 'None', 'partial_parse': 'True', 'log_path': 'logs', 'write_json': 'True', 'quiet': 'False', 'no_print': 'None', 'printer_width': '80', 'send_anonymous_usage_stats': 'True'}
+[0m09:34:23.992727 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:34:23.993725 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.057966493, "process_in_blocks": "53576", "process_kernel_time": 0.14333, "process_mem_max_rss": "103404", "process_out_blocks": "8", "process_user_time": 1.271063}
+[0m09:34:23.994175 [debug] [MainThread]: Command `dbt run` failed at 09:34:23.994090 after 0.06 seconds
+[0m09:34:23.994499 [debug] [MainThread]: Flushing usage events
+[0m09:04:16.110694 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:04:16.114941 | 164493cf-31bf-4542-abde-cda656e3213f ==============================
+[0m09:04:16.114941 [info ] [MainThread]: Running with dbt=1.11.11
+[0m09:04:16.115505 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'version_check': 'True', 'write_json': 'True', 'invocation_command': 'dbt debug', 'no_print': 'None', 'target_path': 'None', 'log_path': 'logs', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'log_format': 'default', 'printer_width': '80', 'profiles_dir': '/home/phuc.vu1/.dbt', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'introspect': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False'}
+[0m09:04:16.126516 [info ] [MainThread]: dbt version: 1.11.11
+[0m09:04:16.127056 [info ] [MainThread]: python version: 3.12.3
+[0m09:04:16.127423 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m09:04:16.127864 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m09:04:16.185562 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m09:04:16.186031 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m09:04:16.186381 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m09:04:16.186833 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m09:04:16.187847 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.12918833, "process_in_blocks": "68624", "process_kernel_time": 0.141048, "process_mem_max_rss": "108100", "process_out_blocks": "8", "process_user_time": 1.372737}
+[0m09:04:16.188292 [debug] [MainThread]: Command `dbt debug` failed at 09:04:16.188207 after 0.13 seconds
+[0m09:04:16.188637 [debug] [MainThread]: Flushing usage events
+[0m09:47:56.885842 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:47:56.889174 | be490940-b775-4015-abe7-8bd3ed2c854f ==============================
+[0m09:47:56.889174 [info ] [MainThread]: Running with dbt=1.11.11
+[0m09:47:56.889747 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'printer_width': '80', 'static_parser': 'True', 'fail_fast': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'profiles_dir': '/home/phuc.vu1/.dbt', 'partial_parse': 'True', 'target_path': 'None', 'no_print': 'None', 'write_json': 'True', 'log_path': 'logs', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_format': 'default', 'version_check': 'True'}
+[0m09:47:56.897643 [info ] [MainThread]: dbt version: 1.11.11
+[0m09:47:56.898245 [info ] [MainThread]: python version: 3.12.3
+[0m09:47:56.898716 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m09:47:56.899218 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m09:47:56.947425 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m09:47:56.947877 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m09:47:56.948306 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m09:47:56.948734 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m09:47:56.949576 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.115444906, "process_in_blocks": "0", "process_kernel_time": 0.095781, "process_mem_max_rss": "108348", "process_out_blocks": "8", "process_user_time": 1.303028}
+[0m09:47:56.950065 [debug] [MainThread]: Command `dbt debug` failed at 09:47:56.949964 after 0.12 seconds
+[0m09:47:56.950426 [debug] [MainThread]: Flushing usage events
+[0m10:05:55.929275 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:05:55.932678 | fa108d44-1acd-4f31-90d5-235dc91f6ee7 ==============================
+[0m10:05:55.932678 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:05:55.933231 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/phuc.vu1/.dbt', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'no_print': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'partial_parse': 'True', 'empty': 'None', 'debug': 'False', 'static_parser': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False'}
+[0m10:05:55.940767 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:05:55.941238 [info ] [MainThread]: python version: 3.12.3
+[0m10:05:55.941721 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m10:05:55.942297 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m10:05:55.989691 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m10:05:55.990181 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m10:05:55.990597 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m10:05:55.991062 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:05:55.991866 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.11424164, "process_in_blocks": "0", "process_kernel_time": 0.116895, "process_mem_max_rss": "108400", "process_out_blocks": "16", "process_user_time": 1.320821}
+[0m10:05:55.992322 [debug] [MainThread]: Command `dbt debug` failed at 10:05:55.992234 after 0.11 seconds
+[0m10:05:55.992655 [debug] [MainThread]: Flushing usage events
+[0m10:07:23.130483 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:07:23.134143 | 2eea26dd-bf4b-4198-9661-a388bdf7109d ==============================
+[0m10:07:23.134143 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:07:23.134754 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'target_path': 'None', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'write_json': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'quiet': 'False', 'profiles_dir': '/home/phuc.vu1/.dbt', 'static_parser': 'True', 'empty': 'None', 'log_format': 'default', 'no_print': 'None'}
+[0m10:07:23.142029 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:07:23.142439 [info ] [MainThread]: python version: 3.12.3
+[0m10:07:23.142767 [info ] [MainThread]: python path: /home/phuc.vu1/Downloads/intern_capstone_project/venv/bin/python3
+[0m10:07:23.143123 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m10:07:23.188230 [info ] [MainThread]: Using profiles dir at /home/phuc.vu1/.dbt
+[0m10:07:23.188685 [info ] [MainThread]: Using profiles.yml file at /home/phuc.vu1/.dbt/profiles.yml
+[0m10:07:23.189055 [info ] [MainThread]: Using dbt_project.yml file at /home/phuc.vu1/Downloads/intern_capstone_project/dbt_project.yml
+[0m10:07:23.189478 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m10:07:23.190277 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.119159706, "process_in_blocks": "0", "process_kernel_time": 0.110892, "process_mem_max_rss": "108432", "process_out_blocks": "8", "process_user_time": 1.303734}
+[0m10:07:23.190710 [debug] [MainThread]: Command `dbt debug` failed at 10:07:23.190624 after 0.12 seconds
+[0m10:07:23.191048 [debug] [MainThread]: Flushing usage events

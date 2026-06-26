@@ -1,0 +1,9 @@
+pet_id,pet_name,species,breed,age,vaccinated,owner_id
+1,Milo,Dog,Labrador,3,Yes,101
+2,Luna,Cat,Persian,5,Y,102
+3,Buddy,Dog,Poodle,,yes,103
+4,Bella,cat,Siamese,2,No,104
+5,Charlie,Dog,Bulldog,4,YES,101
+6,Max,Dog,Beagle,1,N,105
+7,Whiskers,Cat,Maine Coon,7,Yes,106
+8,Rocky,dog,German Shepherd,6,,107

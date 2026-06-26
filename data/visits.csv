@@ -1,0 +1,11 @@
+visit_id,pet_id,visit_date,reason,cost,vet_name,notes
+1,1,2024-01-15,Vaccination,150000,Dr. Minh,Annual checkup
+2,2,2024-01-20,Checkup,100000,Dr. Lan,
+3,3,2024-02-01,Illness,250000,Dr. Minh,Digestive issue
+4,1,2024-02-14,Grooming,80000,Dr. Lan,
+5,4,2024/03/10,Vaccination,150000,Dr. Hung,Mixed date format!
+6,5,2024-03-20,Checkup,100000,,
+7,6,2024-04-01,Illness,200000,Dr. Minh,Skin allergy
+8,7,15-04-2024,Grooming,80000,Dr. Lan,Another bad date format
+9,8,2024-05-01,Vaccination,150000,Dr. Hung,
+10,2,2024-05-15,Checkup,100000,Dr. Minh,Follow-up

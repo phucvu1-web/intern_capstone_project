@@ -1,0 +1,172 @@
+x-airflow-env: &airflow-env
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_db:5432/airflow
+  AIRFLOW__WEBSERVER__SECRET_KEY: secret_key
+  POSTGRES_DB: airflow
+  POSTGRES_USER: airflow
+  POSTGRES_PASSWORD: airflow
+  PGHOST: postgres_warehouse
+  PGUSER: postgres_warehouse
+  PGPORT: 5432
+  PGPASSWORD: postgres_warehouse
+  PGDATABASE: postgres_warehousedb
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+  AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true'
+  _PIP_ADDITIONAL_REQUIREMENTS: apache-airflow-providers-docker==3.8.0
+networks:
+  pipeline_net:
+    driver: bridge
+services:
+
+  postgres_warehouse:
+    image: postgres:15-alpine
+    container_name: postgres_warehouse
+    environment:
+      POSTGRES_USER: postgres_warehouse
+      POSTGRES_PASSWORD: postgres_warehouse
+      POSTGRES_DB: postgres_warehousedb
+    volumes:
+      - postgres_warehouse_data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    networks:
+      - pipeline_net
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "pg_isready",
+          "-U",
+          "postgres_warehouse",
+          "-d",
+          "postgres_warehousedb"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - pipeline_net
+  airflow_db:
+    image: postgres:15-alpine
+    environment:
+      <<: *airflow-env
+    networks:
+      - pipeline_net
+    volumes:
+      - airflow_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      retries: 10   
+    
+    
+  airflow_init:
+    image: apache/airflow:2.7.1-python3.11
+    container_name: airflow_init
+    command: >
+      bash -c "
+      airflow db migrate &&
+      airflow users create
+      --username admin
+      --firstname Admin
+      --lastname User
+      --role Admin
+      --email admin@example.com
+      --password admin
+      || true"
+    environment:
+      <<: *airflow-env
+    networks:
+      - pipeline_net
+    volumes:
+      - ./dags:/opt/airflow/dags   
+    depends_on:
+      - airflow_db
+
+  airflow_scheduler:
+    image: apache/airflow:2.7.1-python3.11
+
+    container_name: airflow_scheduler
+    command: airflow scheduler
+    environment:
+      <<: *airflow-env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./dbt_project:/opt/airflow/project
+      - ./scripts:/opt/airflow/scripts
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - airflow_init
+    group_add:
+      - "983"
+    networks:
+      - pipeline_net
+
+  airflow:
+    image: apache/airflow:2.7.1-python3.11
+    container_name: airflow
+    command: airflow webserver
+    environment:
+      <<: *airflow-env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./dbt_project:/opt/airflow/project
+      - ./scripts:/opt/airflow/scripts
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - airflow_init
+    ports:  
+      - "8080:8080"
+    group_add:
+      - "983"
+    networks:
+      - pipeline_net
+  dbt:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dbt
+    container_name: dbt
+    depends_on:
+      - postgres_warehouse
+    networks:
+      - pipeline_net
+  metabase:
+    image: metabase/metabase:v0.61.x
+    container_name: metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: metabase
+      MB_DB_HOST: metabase_db
+    ports:
+      - "3000:3000"
+    networks:
+      - pipeline_net
+  
+  metabase_db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: metabase
+      POSTGRES_USER: metabase
+      POSTGRES_PASSWORD: metabase
+    networks:
+      - pipeline_net
+
+volumes:
+  postgres_warehouse_data:
+  pgadmin_data:
+  airflow_db_data:
+
