@@ -51,13 +51,6 @@ with DAG(
         command='bash -c "dbt run --project-dir /usr/dbt/project && dbt test --project-dir /usr/dbt/project"',
         docker_url='unix:///var/run/docker.sock',
         network_mode = os.getenv("NETWORK_NAME"),
-        environment={
-            'PGHOST': 'postgres_warehouse',
-            'PGPORT': '5432',
-            'PGUSER': 'postgres_warehouse',
-            'PGPASSWORD': 'postgres_warehouse',
-            'PGDATABASE': 'postgres_warehousedb',           
-        },
     )
 
     create_tables >> ingest_data >> run_dbt
